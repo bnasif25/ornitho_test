@@ -20,3 +20,13 @@ Il vérifie que chaque photo est correctement reconnue **avec un score de confia
 ---
 
 ## 📁 Structure du projet
+
+ornitho-test/
+├── tests/
+│   ├── bird_identification.spec.ts   # scénarios de test
+│   └── bird_data/                    # photos .jpeg
+│       ├── tarin_triste.jpeg
+│       ├── bergeronnette_printaniere.jpeg
+│       └── chevalier_aboyeur.jpeg
+├── playwright.config.ts              # configuration Playwright
+└── README.md                         # ce fichier
