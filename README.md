@@ -89,11 +89,6 @@ npx playwright show-report
 ```
 Ouvre un rapport HTML interactif avec vidéos, traces, et logs.
 
-### Scripts Customs (dans package.json)
-- `test:chrome` : Exécuter seulement sur Chromium.
-- Ajoutez-en via `npm script` pour plus de flexibilité.
-
-
 ---
 
 ## 🐞 Dépannage
