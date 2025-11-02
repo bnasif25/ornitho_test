@@ -7,7 +7,7 @@ test('tarin_triste', async ({ page }) => {
   // Wait for the drop prompt to appear
   await page.waitForSelector('span.drop_prompt');
   
-  // Find file input (it's usually a sibling or child of the drop container)
+  // Find file input 
   const fileInput = page.locator('input[type="file"]').first();
   await fileInput.setInputFiles('/Users/nasif/Birds/tests/bird_data/tarin_triste.jpeg');
   
@@ -17,9 +17,9 @@ test('tarin_triste', async ({ page }) => {
   //click on continue button on the second page
   await page.click('input.validez');
 
-// Get both elements in parallel - much faster
+// Get both elements in parallel 
 const birdLink = page.locator('a.fiche', { hasText: 'Tarin triste' }).first();
-const confidenceElement = page.locator('div.pour100esp').nth(1); // the percentage one
+const confidenceElement = page.locator('div.pour100esp').nth(1); 
 
 // Wait for both to be visible
 await expect(birdLink).toBeVisible();
@@ -40,7 +40,7 @@ test('chevalier_aboyeur', async ({ page }) => {
   // Wait for the drop prompt to appear
   await page.waitForSelector('span.drop_prompt');
   
-  // Find file input (it's usually a sibling or child of the drop container)
+  // Find file input 
   const fileInput = page.locator('input[type="file"]').first();
   await fileInput.setInputFiles('/Users/nasif/Birds/tests/bird_data/chevalier_aboyeur.jpeg');
   
@@ -52,7 +52,7 @@ test('chevalier_aboyeur', async ({ page }) => {
 
 // Get both elements in parallel - much faster
 const birdLink = page.locator('a.fiche', { hasText: 'Chevalier aboyeur' }).first();
-const confidenceElement = page.locator('div.pour100esp').nth(1); // the percentage one
+const confidenceElement = page.locator('div.pour100esp').nth(1); 
 
 // Wait for both to be visible
 await expect(birdLink).toBeVisible();
@@ -73,7 +73,7 @@ test('bergeronnette_printaniere', async ({ page }) => {
   // Wait for the drop prompt to appear
   await page.waitForSelector('span.drop_prompt');
   
-  // Find file input (it's usually a sibling or child of the drop container)
+  // Find file input 
   const fileInput = page.locator('input[type="file"]').first();
   await fileInput.setInputFiles('/Users/nasif/Birds/tests/bird_data/bergeronnette_printaniere.jpeg');
   
@@ -83,9 +83,9 @@ test('bergeronnette_printaniere', async ({ page }) => {
   //click on continue button on the second page
   await page.click('input.validez');
 
-// Get both elements in parallel - much faster
+// Get both elements in parallel
 const birdLink = page.locator('a.fiche', { hasText: 'Bergeronnette printanière' }).first();
-const confidenceElement = page.locator('div.pour100esp').nth(1); // the percentage one
+const confidenceElement = page.locator('div.pour100esp').nth(1); 
 
 // Wait for both to be visible
 await expect(birdLink).toBeVisible();
