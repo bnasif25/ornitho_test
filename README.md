@@ -1,3 +1,4 @@
+```markdown
 # 🐦 Projet d’automatisation des tests – ornitho.com
 
 ![Playwright](https://img.shields.io/badge/Powered%20by-Playwright-blue.svg)
@@ -20,7 +21,7 @@ Il vérifie que chaque photo est correctement reconnue **avec un score de confia
 ---
 
 ## 📁 Structure du projet
-
+```
 ornitho-test/
 ├── tests/
 │   ├── bird_identification.spec.ts   # scénarios de test
@@ -30,7 +31,7 @@ ornitho-test/
 │       └── chevalier_aboyeur.jpeg
 ├── playwright.config.ts              # configuration Playwright
 └── README.md                         # ce fichier
-
+```
 
 ---
 
@@ -43,15 +44,19 @@ cd ornitho_test
 # Installer les dépendances
 npm install
 npx playwright install
+```
 
-🛠️ Modifier le dossier des images
+---
 
-1. Ouvrir tests/bird_identification.spec.ts
-2. Changer les lignes : 12 , 45 , 78 >>> VOTRE/CHEMIN/VERS/bird_data
+## 🛠️ Modifier le dossier des images
+1. Ouvrir `tests/bird_identification.spec.ts`
+2. Changer les lignes : 12, 45, 78 >>> `VOTRE/CHEMIN/VERS/bird_data`
 3. Sauvegarder → relancer les tests.
 
-🚀 Lancer les tests
+---
 
+## 🚀 Lancer les tests
+```bash
 # Mode avec navigateur visible (headed)
 npx playwright test --headed
 
@@ -60,6 +65,10 @@ npx playwright test
 
 # Voir le rapport HTML interactif
 npx playwright show-report
+```
 
-🤝 Contribution
+---
+
+## 🤝 Contribution
 Les PR et suggestions sont les bienvenues !
+```
