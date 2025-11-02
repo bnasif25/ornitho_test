@@ -30,3 +30,36 @@ ornitho-test/
 │       └── chevalier_aboyeur.jpeg
 ├── playwright.config.ts              # configuration Playwright
 └── README.md                         # ce fichier
+
+
+---
+
+## ⚙️ Installation
+```bash
+# Cloner le dépôt
+git clone https://github.com/bnasif25/ornitho_test.git
+cd ornitho_test
+
+# Installer les dépendances
+npm install
+npx playwright install
+
+🛠️ Modifier le dossier des images
+
+1. Ouvrir tests/bird_identification.spec.ts
+2. Changer les lignes : 12 , 45 , 78 >>> VOTRE/CHEMIN/VERS/bird_data
+3. Sauvegarder → relancer les tests.
+
+🚀 Lancer les tests
+
+# Mode avec navigateur visible (headed)
+npx playwright test --headed
+
+# Mode silencieux (headless, par défaut)
+npx playwright test
+
+# Voir le rapport HTML interactif
+npx playwright show-report
+
+🤝 Contribution
+Les PR et suggestions sont les bienvenues !
