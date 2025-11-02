@@ -1,5 +1,5 @@
 import { test, expect } from '@playwright/test';
-import path from 'node: path';
+import path from 'node:path';
 
 // Consolidated bird identification tests
 test.describe('evaluation_oiseaux', () => {
