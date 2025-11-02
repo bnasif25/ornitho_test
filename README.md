@@ -1,5 +1,5 @@
-```markdown
-# 🐦 Projet d’automatisation des tests – ornitho.com
+```
+# 🐦 Projet d’Automatisation des Tests – ornitho.com
 
 ![Playwright](https://img.shields.io/badge/Powered%20by-Playwright-blue.svg)
 ![License](https://img.shields.io/badge/Licence-MIT-green.svg)
@@ -9,66 +9,115 @@
 
 ## 📋 Description
 Ce projet automatise les tests du site **ornitho.com**, une plateforme d’identification d’oiseaux par intelligence artificielle.  
-Il vérifie que chaque photo est correctement reconnue **avec un score de confiance ≥ 90 %**.
+Il vérifie que chaque photo uploadée est correctement reconnue **avec un score de confiance ≥ 90 %**.
+
+Les tests couvrent :
+- Upload d’images d’oiseaux depuis le dossier `tests/bird_data/`.
+- Vérification des résultats d’identification (espèce + score).
+- Assertions robustes avec Playwright pour cross-browser (Chrome, Firefox, WebKit).
 
 ---
 
 ## 🧰 Prérequis
-- [Node.js](https://nodejs.org/) ≥ 18  
+- [Node.js](https://nodejs.org/) ≥ v18  
 - [Git](https://git-scm.com/)  
-- Un éditeur de code (VS Code recommandé) + extension [Playwright](https://marketplace.visualstudio.com/items?itemName=ms-playwright.playwright)
+- Éditeur de code : VS Code (recommandé) avec l’extension [Playwright](https://marketplace.visualstudio.com/items?itemName=ms-playwright.playwright)
 
 ---
 
-## 📁 Structure du projet
+## 📁 Structure du Projet
 ```
-ornitho-test/
+ornitho_test/
 ├── tests/
-│   ├── bird_identification.spec.ts   # scénarios de test
-│   └── bird_data/                    # photos .jpeg
+│   ├── bird_identification.spec.ts   # Scénarios de tests principaux
+│   └── bird_data/                    # Données de test (photos JPEG)
 │       ├── tarin_triste.jpeg
 │       ├── bergeronnette_printaniere.jpeg
 │       └── chevalier_aboyeur.jpeg
-├── playwright.config.ts              # configuration Playwright
-└── README.md                         # ce fichier
+├── playwright.config.ts              # Configuration Playwright (browsers, timeouts, etc.)
+├── package.json                      # Dépendances et scripts
+├── .gitignore                        # Ignore node_modules, rapports, etc.
+└── README.md                         # Ce fichier
 ```
 
 ---
 
 ## ⚙️ Installation
 ```bash
-# Cloner le dépôt
+# 1. Cloner le dépôt
 git clone https://github.com/bnasif25/ornitho_test.git
 cd ornitho_test
 
-# Installer les dépendances
+# 2. Installer les dépendances
 npm install
+
+# 3. Installer les navigateurs Playwright
 npx playwright install
 ```
+*(Sur Linux : `npx playwright install --with-deps` pour les dépendances système.)*
+
+### 🛠️ Configuration des Chemins d’Images
+Les tests utilisent des chemins relatifs par défaut (`tests/bird_data/`).
+
+Si besoin de modifier :
+1. Ouvrir `tests/bird_identification.spec.ts`.
+2. Aux lignes ~12, 45, 78 : Remplacer par votre chemin absolu/relatif (ex. `'VOTRE/CHEMIN/VERS/bird_data/tarin_triste.jpeg'`).
+3. Sauvegarder le fichier.
 
 ---
 
-## 🛠️ Modifier le dossier des images
-1. Ouvrir `tests/bird_identification.spec.ts`
-2. Changer les lignes : 12, 45, 78 >>> `VOTRE/CHEMIN/VERS/bird_data`
-3. Sauvegarder → relancer les tests.
-
----
-
-## 🚀 Lancer les tests
+## 🚀 Lancer les Tests
 ```bash
-# Mode avec navigateur visible (headed)
+# Mode avec navigateur visible (idéal pour debug)
 npx playwright test --headed
 
-# Mode silencieux (headless, par défaut)
+# Mode silencieux (headless, par défaut – pour CI/CD)
 npx playwright test
 
-# Voir le rapport HTML interactif
+# Lancer un test spécifique (ex. upload)
+npx playwright test bird_identification
+
+# Mode UI interactif (sélectionner/débugger visuellement)
+npx playwright test --ui
+
+# Mode debug (pas à pas)
+npx playwright test --debug
+```
+
+### 📊 Voir les Résultats
+Après exécution :
+```bash
 npx playwright show-report
 ```
+Ouvre un rapport HTML interactif avec vidéos, traces, et logs.
+
+### Scripts Customs (dans package.json)
+- `test:chrome` : Exécuter seulement sur Chromium.
+- Ajoutez-en via `npm script` pour plus de flexibilité.
+
+
+---
+
+## 🐞 Dépannage
+- **Fichier non trouvé** : Vérifiez les chemins relatifs avec `console.log(process.cwd())` dans un test.
+- **Problèmes navigateurs** : Relancez `npx playwright install`.
+- **Tests flaky** : Ajoutez `--retries=2` ou augmentez les timeouts dans `playwright.config.ts`.
 
 ---
 
 ## 🤝 Contribution
-Les PR et suggestions sont les bienvenues !
+1. Fork le repo.
+2. Créez une branche : `git checkout -b feature/nouveau-test`.
+3. Commitez : `git commit -m "Ajout test X"`.
+4. Pushez et ouvrez une Pull Request.
+
+
+---
+
+
+Projet prêt en <5 min. Clonez, installez, lancez ! Questions ? Contactez-moi.
+
+Construit par [bnasif25](https://github.com/bnasif25) 
 ```
+
+Commit and push to GitHub—it'll look professional right away. If paths in your repo are different (e.g., `tests/data/` instead of `tests/bird_data/`), tweak the README before pasting. Done! 😊
