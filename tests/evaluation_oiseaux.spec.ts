@@ -94,6 +94,6 @@ await expect(confidenceElement).toBeVisible();
 // Then get the confidence text
 const confidenceText = await confidenceElement.textContent() || '';
 const confidencePercentage = parseFloat(confidenceText.replace('%', '').trim());
-expect(confidencePercentage).toBeGreaterThanOrEqual(70);
+expect(confidencePercentage).toBeGreaterThanOrEqual(90);
 
 });
