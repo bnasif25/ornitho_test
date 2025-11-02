@@ -1,7 +1,6 @@
 # 🐦 Projet d’Automatisation des Tests – ornitho.com
 
 ![Playwright](https://img.shields.io/badge/Powered%20by-Playwright-blue.svg)
-![License](https://img.shields.io/badge/Licence-MIT-green.svg)
 ![TypeScript](https://img.shields.io/badge/Langage-TypeScript-3178C6.svg)
 
 ---
@@ -119,4 +118,3 @@ Projet prêt en <5 min. Clonez, installez, lancez ! Questions ? Contactez-moi.
 Construit par [bnasif25](https://github.com/bnasif25) 
 ```
 
-Commit and push to GitHub—it'll look professional right away. If paths in your repo are different (e.g., `tests/data/` instead of `tests/bird_data/`), tweak the README before pasting. Done! 😊
