@@ -59,7 +59,7 @@ Les tests utilisent des chemins relatifs par défaut (`tests/bird_data/`).
 
 Si besoin de modifier :
 1. Ouvrir `tests/bird_identification.spec.ts`.
-2. Aux lignes ~12, 45, 78 : Remplacer par votre chemin absolu/relatif (ex. `'VOTRE/CHEMIN/VERS/bird_data/tarin_triste.jpeg'`).
+2. Ajuster la ligne du imagePath si le dossier change (ex. : chemin absolu pour debug local).
 3. Sauvegarder le fichier.
 
 ---
