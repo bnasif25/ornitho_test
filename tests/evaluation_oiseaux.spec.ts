@@ -2,7 +2,7 @@ import { test, expect } from '@playwright/test';
 import path from 'node: path';
 
 // Consolidated bird identification tests
-test.describe('Bird Recognition Tool - Ornitho.com', () => {
+test.describe('evaluation_oiseaux', () => {
   const birds = [ 
     { file: 'tarin_triste.jpeg', expectedName: 'Tarin triste' },
     { file: 'chevalier_aboyeur.jpeg', expectedName: 'Chevalier aboyeur' },
@@ -47,8 +47,6 @@ test.describe('Bird Recognition Tool - Ornitho.com', () => {
       // Log for analysis (always, or on failure via hook)
       console.log(`Image: ${bird.file} | Recognized Name Visible: Yes | Confidence: ${confidencePercentage}%`);
       
-      // Optional: Screenshot on success/failure
-      await page.screenshot({ path: `results/${bird.file}-result.png` });
     });
   }
 });
