@@ -1,4 +1,3 @@
-```
 # 🐦 Projet d’Automatisation des Tests – ornitho.com
 
 ![Playwright](https://img.shields.io/badge/Powered%20by-Playwright-blue.svg)
