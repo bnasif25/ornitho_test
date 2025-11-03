@@ -1,6 +1,7 @@
 # 🐦 Projet d’Automatisation des Tests – ornitho.com
 
 ![Playwright](https://img.shields.io/badge/Powered%20by-Playwright-blue.svg)
+![License](https://img.shields.io/badge/Licence-MIT-green.svg)
 ![TypeScript](https://img.shields.io/badge/Langage-TypeScript-3178C6.svg)
 
 ---
@@ -106,7 +107,7 @@ Ouvre un rapport HTML interactif avec vidéos, traces, et logs.
 
 
 ---
-
+ LicenceMIT License (LICENSE) – Libre d’utilisation et modification.
 
 Projet prêt en <5 min. Clonez, installez, lancez ! Questions ? Contactez-moi.
 
