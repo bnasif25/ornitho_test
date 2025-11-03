@@ -110,5 +110,7 @@ Ouvre un rapport HTML interactif avec vidéos, traces, et logs.
  ## 📄 Licence
  
 MIT License (LICENSE) – Libre d’utilisation et modification.
+
 Projet prêt en <5 min. Clonez, installez, lancez ! Questions ? Contactez-moi.
+
 Construit par [bnasif25](https://github.com/bnasif25) 
